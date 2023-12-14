@@ -1,0 +1,10 @@
+<app-entrada *ngIf="mostrarSaludo" (quieroJugar)="quiereJugar()"></app-entrada>
+<app-mayorMenor
+  *ngIf="mostrarMayormenor"
+  (gano)="ganoMayoroMenor()"
+></app-mayorMenor>
+<app-ahorcado *ngIf="mostrarAhorcado" (gano)="ganoHorcado()"></app-ahorcado>
+<app-ordenamiento
+  *ngIf="mostrarOrdenamiento"
+  (volver)="quiereJugar()"
+></app-ordenamiento>

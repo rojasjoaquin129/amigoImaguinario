@@ -1,0 +1,28 @@
+<div class="todo">
+  <div class="text-center" style="color: white">
+    <h1>Puzzle numérico</h1>
+    <h4>
+      Es un juego muy difícil ya que está totalmente en aleatorio, podes estar
+      todo el día
+    </h4>
+    <h4>Movimientos realizados : {{ movimientos }}</h4>
+  </div>
+
+  <div class="section">
+    <div
+      *ngFor="let caja of cajas"
+      [ngClass]="caja.estado"
+      (click)="tocoCaja(caja)"
+    >
+      {{ caja.numero }}
+    </div>
+  </div>
+  <p class="text-center" style="color: white">
+    Consejo: Empezá ordenando la primera y última fila, es más rápido
+  </p>
+  <div class="botones">
+    <button class="btn btn-info ml-4" (click)="inicializarjuego()">
+      Reiniciar
+    </button>
+  </div>
+</div>
